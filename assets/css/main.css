@@ -29,7 +29,7 @@
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #fafafa;  /* The default color of the main navmenu links */
+  --nav-color: black;  /* The default color of the main navmenu links */
   --nav-hover-color: #18d26e; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #1a1a1a; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #1a1a1a; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
@@ -467,6 +467,7 @@ h6 {
 
 .footer .social-links {
   margin: 0 0 30px 0;
+  
 }
 
 .footer .social-links a {
@@ -682,6 +683,30 @@ section,
 }
 
 /*--------------------------------------------------------------
+# HCI Assignments Sections
+--------------------------------------------------------------*/
+#HCI_Assignments {
+  margin-top: -50px;  /* Move the section up by 50px */
+
+}
+#HCI_Assignments .container {
+  position: relative;
+  z-index: 3;
+}
+
+#HCI_Assignments h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #000000;
+  font-family: (--heading-font);
+  margin-left: 30px;
+  text-align: left;
+  line-height: 1.2;
+  letter-spacing: 1px;
+  text-transform: uppercase;}
+
+/*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
 .hero {
@@ -692,16 +717,19 @@ section,
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #ffffff; 
+
 }
 
-.hero img {
-  position: absolute;
-  inset: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
+.hero img.hero-image {
+  width: auto;
+  max-width: 400px;
+  max-height: 400;
+  height: auto;
   object-fit: cover;
-  z-index: 1;
+  z-index: 2; 
+  margin-right: 300px;  
+
 }
 
 .hero .container {
@@ -711,18 +739,24 @@ section,
 
 .hero h2 {
   margin: 0;
-  font-size: 64px;
+  font-size: 30px;
   font-weight: 700;
+  color: #000000; 
+  margin-left: 100px;
 }
 
 .hero p {
   margin: 5px 0 0 0;
-  font-size: 26px;
+  font-size: 16px;
+  color: #000000; 
+  margin-left: 100px;
+
 }
 
 .hero p span {
   letter-spacing: 1px;
   border-bottom: 2px solid var(--accent-color);
+  color: #000000; 
 }
 
 .hero .social-links {
@@ -730,6 +764,7 @@ section,
 }
 
 .hero .social-links a {
+  color: #000000; 
   background-color: color-mix(in srgb, var(--default-color), transparent 90%);
   color: var(--default-color);
   font-size: 14px;
@@ -760,6 +795,9 @@ section,
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
+.about {
+  background-color: #ffffff;
+}
 .about .content h2 {
   font-weight: 700;
   font-size: 24px;
@@ -1382,14 +1420,19 @@ section,
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
+
+.contact {
+  background: white;
+}
 .contact .info-item {
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
   padding: 20px 30px;
+  color: black;
 }
 
 .contact .info-item .icon {
   color: var(--contrast-color);
-  background-color: var(--accent-color);
+  background-color: white;
   width: 56px;
   height: 56px;
   font-size: 24px;
@@ -1399,18 +1442,21 @@ section,
   transition: all 0.3s ease-in-out;
   border-radius: 50%;
   margin-right: 15px;
+  color: black;
 }
 
 .contact .info-item h3 {
   font-size: 18px;
   font-weight: 700;
   margin: 0 0 2px 0;
+  color: black;
 }
 
 .contact .info-item p {
   padding: 0;
   margin-bottom: 0;
   font-size: 14px;
+  color: black;
 }
 
 .contact .info-item .social-links a {
@@ -1419,29 +1465,31 @@ section,
   line-height: 1;
   margin: 4px 6px 0 0;
   transition: 0.3s;
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  color: black;
 }
 
 .contact .info-item .social-links a:hover {
-  color: var(--accent-color);
+  color: black;
 }
 
 .contact .php-email-form {
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
   padding: 30px;
   margin-top: 30px;
+  color: black;
 }
 
 @media (max-width: 575px) {
   .contact .php-email-form {
     padding: 20px;
+    color: black;
   }
 }
 
 .contact .php-email-form input[type=text],
 .contact .php-email-form input[type=email],
 .contact .php-email-form textarea {
-  color: var(--default-color);
+  color: black;
   background-color: color-mix(in srgb, var(--background-color), transparent 50%);
   border-color: color-mix(in srgb, var(--default-color), transparent 80%);
   font-size: 14px;
@@ -1459,11 +1507,11 @@ section,
 .contact .php-email-form input[type=text]::placeholder,
 .contact .php-email-form input[type=email]::placeholder,
 .contact .php-email-form textarea::placeholder {
-  color: color-mix(in srgb, var(--default-color), transparent 70%);
+  color: black;
 }
 
 .contact .php-email-form button[type=submit] {
-  color: var(--contrast-color);
+  color: black;
   background: var(--accent-color);
   border: 0;
   padding: 10px 30px;
