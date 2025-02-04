@@ -468,9 +468,9 @@ h6 {
   width: 60px;
   height: 60px;
   animation: animate-preloader 1.5s linear infinite;
-}
+} */
 
-@keyframes animate-preloader {
+/* @keyframes animate-preloader {
   0% {
     transform: rotate(0deg);
   }
