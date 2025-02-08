@@ -630,6 +630,52 @@ section,
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
+
+/* Add some space between sections */
+.hero {
+  padding: 50px 0;
+  background-color: #f8f9fa;
+}
+
+.image-descriptions {
+  padding: 50px 0;
+  background-color: #ffffff;
+}
+
+.image-descriptions .row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.image-descriptions .col-md-4 {
+  margin-bottom: 30px;
+  color: black;
+}
+
+.image-descriptions img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.image-descriptions p {
+  text-align: center;
+  font-weight: 600;
+  margin-top: 10px;
+  font-size: 1.1rem;
+}
+
+footer {
+  padding: 20px 0;
+  background-color: #343a40;
+  color: white;
+  text-align: center;
+}
+
+footer .sitename {
+  font-size: 1.5rem;
+}
+
 .hero {
   width: 100%;
   min-height: 100vh;
