@@ -716,6 +716,12 @@ footer .sitename {
   text-align: center;  /* Center the heading */
 }
 
+.hero h3 {
+  font-size: 1.3vw;
+  font-weight: 700;
+  color: #000000; 
+}
+
 .hero p {
   font-size: 1vw;
   color: #000000; 
