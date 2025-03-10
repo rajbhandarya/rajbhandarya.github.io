@@ -19,7 +19,7 @@
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
-  --background-color: #000000; /* Background color for the entire website, including individual sections */
+  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #fafafa; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #ffffff; /* Color for headings, subheadings and title throughout the website */
   --accent-color: #0072b2; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
@@ -45,7 +45,7 @@
 }
 
 .dark-background {
-  --background-color: rgba(15, 15, 15, 0.975);
+  --background-color: #343a40;
   --default-color: #ffffff;
   --heading-color: #ffffff;
   --surface-color: #292929f9;
@@ -766,6 +766,45 @@ footer .sitename {
   .hero p {
     font-size: 20px;
   }
+}
+
+
+/*--------------------------------------------------------------
+# Projects Page
+--------------------------------------------------------------*/
+/* Increase specificity */
+.projects-page .project-item {
+  background-color: #fff; /* White background */
+  /* border: 2px solid #333; */
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.projects-page .project-item h3 {
+  color: #333; /* Black text */
+}
+
+.projects-page .project-item p {
+  color: #333; /* Black text */
+}
+
+.projects-page .project-image {
+  background-color: #fff; /* White background */
+  padding: 20px;
+  margin-top: 20px;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  */
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projects-page .project-image img {
+  max-width: 60%; /* Smaller image */
+  height: auto;
+  /* border-radius: 8px; */
 }
 
 /*--------------------------------------------------------------

@@ -15,7 +15,7 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -27,89 +27,184 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Personal
-  * Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
-  * Updated: Nov 04 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <!-- Additional Custom CSS -->
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #ffffff;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 600;
+      color: #479bf5; /* Blue color for headings */
+    }
+
+    a {
+      color: #479bf5; /* Blue color for links */
+      text-decoration: none;
+    }
+
+    .header {
+      background-color: #ffffff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .navmenu ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .navmenu ul li {
+      display: inline-block;
+      margin-left: 20px;
+    }
+
+    .navmenu ul li a {
+      font-weight: 500;
+      color: #333;
+    }
+
+    .navmenu ul li a.active {
+      color: #479bf5; /* Blue color for active link */
+    }
+
+    .bio-box {
+      background-color: #ffffff;
+      border-radius: 10px;
+      padding: 30px;
+      margin: 40px auto;
+      max-width: 900px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .bio-box h2 {
+      margin-bottom: 20px;
+      font-size: 2rem;
+      color: #d55e00; /* Orange color for the Biography heading */
+      font-family: 'Raleway', sans-serif; /* Ensure the same font as Contact Information */
+      font-weight: 600; /* Ensure the same weight as Contact Information */
+    }
+
+    .bio-box p {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    .bio-box img {
+      border-radius: 10px;
+      width: 250px;
+      height: auto;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .footer {
+      background-color: #343a40;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .footer .social-links a {
+      color: #fff;
+      margin: 0 10px;
+      font-size: 1.2rem;
+    }
+
+    .footer .social-links a:hover {
+      color: #479bf5; /* Blue color on hover */
+    }
+
+    .footer .credits a {
+      color: #479bf5; /* Blue color for credits link */
+    }
+
+    /* Scroll to Top Button */
+    #scroll-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 9999;
+      background-color: #479bf5; /* Blue color for the button */
+      color: #fff;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    #scroll-top.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    #scroll-top:hover {
+      background-color: #357abd; /* Darker blue on hover */
+    }
+  </style>
 </head>
 
 <body class="index-page">
 
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-
       <a href="index.html" class="logo d-flex align-items-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="sitename"></h1>
+        <h1 class="sitename">Personal</h1>
       </a>
-
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="about.html">Campus Care Project</a></li>
+          <li><a href="Projects.html">Projects</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
-
     </div>
   </header>
 
   <main class="main">
-
     <!-- Hero Section -->
-    <section id="hero" class="hero section dark-background">
+    <section id="hero" class="hero section">
       <div class="container">
-        <h2>Biography</h2>
-        <p> 
-          Hi, I am Anika Rajbhandary! I am a Junior, Computer Science Major and Biochemistry Minor at Carleton College. 
-          
-          I interned previously at Oregon Health & Science University's Department of Medical Informatics and Clinical Epidemiology (2023) and North Carolina State University's Computational Chemistry Department (2024). I am currently searching for available health related Computer Science internship/research opportunities this summer. <br> <br> <p>Linked <a href="assets/Resume No GPA copy.pdf" target="_blank"><u>here</u></a> is my full resume! 
-          <br><br>
-          <b>This website is under construction</b>
-          </p>
-
-
-        </p>
-        <!-- <p>I'm <span class="typed" data-typed-items="Designer, Developer, Freelancer, Photographer">Photographer</span><span class="typed-cursor typed-cursor--blink"></span></p> -->
-        <div class="social-links">
-          <!-- <a href="#"><i class="bi bi-twitter-x"></i></a> -->
-          <!-- <a href="#"><i class="bi bi-facebook"></i></a> -->
-          <!-- <a href="#"><i class="bi bi-instagram"></i></a> -->
-          <!-- <a href="#"><i class="bi bi-linkedin"></i></a> -->
+        <div class="bio-box">
+          <div>
+            <h2>Biography</h2>
+            <p> 
+              Hi, I am Anika Rajbhandary! I am a Junior, Computer Science Major and Biochemistry Minor at Carleton College. 
+              
+              I interned previously at Oregon Health & Science University's Department of Medical Informatics and Clinical Epidemiology (2023) and North Carolina State University's Computational Chemistry Department (2024). I am currently searching for available health related Computer Science internship/research opportunities this summer. <br> <br> 
+              Linked <a href="assets/Resume No GPA copy.pdf" target="_blank"><u>here</u></a> is my full resume! 
+            </p>
+          </div>
+          <img src="assets/img/Summit 351-Enhanced-NR-low res.jpg" alt="Anika Rajbhandary">
         </div>
       </div>
-      <img src="assets/img/Summit 351-Enhanced-NR-low res.jpg" alt="Anika Rajbhandary" class="hero-image">
-
-
     </section><!-- /Hero Section -->
-
   </main>
 
-  <footer id="footer" class="footer dark-background">
+  <footer id="footer" class="footer">
     <div class="container">
       <h3 class="sitename">Personal</h3>
-      <!-- <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p> -->
       <div class="social-links d-flex justify-content-center">
-        <!-- <a href=""><i class="bi bi-twitter-x"></i></a> -->
-        <!-- <a href=""><i class="bi bi-facebook"></i></a> -->
-        <!-- <a href=""><i class="bi bi-instagram"></i></a> -->
-        <!-- <a href=""><i class="bi bi-skype"></i></a> -->
-        <!-- <a href="https://www.linkedin.com/in/anika-rajbhandary-4b067a320/"><i class="bi bi-linkedin"></i></a> -->
+        <!-- Add social links here if needed -->
       </div>
       <div class="container">
         <div class="copyright">
           <span>Copyright</span> <strong class="px-1 sitename">Personal</strong> <span>All Rights Reserved</span>
         </div>
         <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you've purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
           Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
         </div>
       </div>
@@ -136,6 +231,26 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- Scroll to Top JavaScript -->
+  <script>
+    window.addEventListener('scroll', function () {
+      const scrollTop = document.getElementById('scroll-top');
+      if (window.scrollY > 100) {
+        scrollTop.classList.add('show');
+      } else {
+        scrollTop.classList.remove('show');
+      }
+    });
+
+    document.getElementById('scroll-top').addEventListener('click', function (e) {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
 
 </body>
 
