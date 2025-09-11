@@ -1,0 +1,463 @@
+<!-- ================== CAMPUSCARE.HTML ================== -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Care Project</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #ffffff;
+      color: #333;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+    
+    h1, h2, h3 {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 600;
+      color: #479bf5;
+    }
+    
+    a {
+      color: #479bf5;
+      text-decoration: none;
+    }
+
+    /* Header/Navbar */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+    
+    header .container {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+    }
+    
+    nav ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+    
+    nav ul li {
+      margin-left: 20px;
+    }
+    
+    nav ul li a {
+      font-weight: 500;
+      color: #333;
+    }
+    
+    nav ul li a.active {
+      color: #479bf5;
+    }
+
+    /* Main content */
+    main {
+      max-width: 1100px;
+      margin: 100px auto 40px;
+      padding: 0 20px;
+    }
+    
+    .section {
+      margin-bottom: 60px;
+    }
+    
+    .container {
+      max-width: 100%;
+    }
+
+    /* Image and Video Grid Layout */
+    .image-descriptions .container .row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      justify-items: center;
+      margin: 20px 0;
+    }
+    
+    .col-md-4 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 320px;
+      width: 100%;
+    }
+    
+    /* Image and Video Sizing */
+    .col-md-4 img {
+      max-width: 280px;
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
+    
+    .col-md-4 video {
+      max-width: 280px;
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
+    
+    /* Caption styling */
+    .col-md-4 p {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #555;
+      margin: 0;
+      max-width: 280px;
+      line-height: 1.4;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .image-descriptions .container .row {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+      
+      .col-md-4 img,
+      .col-md-4 video {
+        max-width: 260px;
+      }
+      
+      .col-md-4 p {
+        max-width: 260px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .col-md-4 img,
+      .col-md-4 video {
+        max-width: 240px;
+      }
+      
+      .col-md-4 p {
+        max-width: 240px;
+      }
+      
+      main {
+        padding: 0 15px;
+      }
+    }
+
+    /* Footer */
+    footer {
+      background: #343a40;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+    
+    footer a { 
+      color: #479bf5; 
+    }
+
+    /* Scroll to top button */
+    #scroll-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #479bf5;
+      color: #fff;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease;
+    }
+    
+    #scroll-top.show {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    /* Additional styling for better readability */
+    p {
+      margin-bottom: 15px;
+    }
+    
+    h3 {
+      margin-top: 30px;
+      margin-bottom: 15px;
+    }
+    
+    /* Link styling in paragraphs */
+    p a {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Projects.html" class="active">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main -->
+    <main class="main">
+    <!-- Hero Section -->
+    <section class="hero section">
+      <div class="container">
+        <h2>Campus Care Project</h2>
+        <h3>Teammates</h3>
+        <p>Ella Visconti, Mustafe Osman, Conrado PeÃƒÂ±a Lemes</p>
+
+        <h3>Project Description</h3>
+        <p>Campus Care is an all-encompassing and interactive mental health hub for Carleton students. It contains information regarding counseling services, affiliated offices, upcoming wellness events, mental health awareness, and faculty contacts. It is designed to be interactive so users can customize these resources towards their personal experiences and mental health needs.</p>
+        
+        <h3>User Interviews</h3>
+        <p>Our group conducted five semi-structured interviews and two participatory design interviews from two main sets of stakeholders: Carleton students who may be interested in utilizing the resource to address their diverse mental health needs, and Carleton students, faculty, and staff who are knowledgeable about the available mental health resources, needs, and information on campus. The second set of stakeholders included people involved in the Office of Health and Promotion (OHP) and Student Health and Counseling (SHAC).
+          <br>I conducted a participatory design interview with a Student Wellness Advocate from the OHP and gathered valuable information regarding what they believed to be the most critical mental health resources/information on campus, areas where many people are unaware of what resources exist, and was able to see their design come to life and how they envisioned a website may be able to address these pain point areas.
+          <br>I utilized the information gathered from the participatory design interview to help build my first, low-fidelity prototype in Figma. In their drawing, the interview sketched out a homepage that described what mental health is and why it is important as they believed this to be a critical part of further delving into your mental health journey. Additionally, they discussed key Carleton mental health resources such as TimelyCare, SHAC counseling services, and student-led peer support groups which I included as separate pages in the navigation bar.
+          </p> <br>
+        <h3>Low-Fidelity Prototype</h3>
+      </div>
+    </section><!-- /Hero Section -->
+
+    <!-- Image Descriptions Section -->
+    <section class="image-descriptions">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <img src="assets/img/s1.png" alt="CampusCare website homepage image" class="img-fluid">
+            <p>CampusCare website homepage</p>
+          </div>
+          <div class="col-md-4">
+            <img src="assets/img/s2.png" alt="Campus Care wellness events image" class="img-fluid">
+            <p>Campus Care wellness events</p>
+          </div>
+          <div class="col-md-4">
+            <img src="assets/img/s3.png" alt="Campus Care counseling services image" class="img-fluid">
+            <p>Campus Care counseling services</p>
+          </div>
+          <div class="col-md-4">
+            <img src="assets/img/s4.png" alt="Campus Care counseling services image" class="img-fluid">
+            <p>Campus Care support groups</p>
+          </div>
+          <div class="col-md-4">
+            <img src="assets/img/s5.png" alt="Campus Care counseling services image" class="img-fluid">
+            <p>Campus Care affiliated offices</p>
+          </div>
+        </div>
+      </div>
+    </section><!-- /Image Descriptions Section -->
+
+    <!-- Requirements Section -->
+    <section class="hero section">
+      <div class="container">
+        <h3>UX Design & Analysis Process</h3>
+        <p>We then analyzed each of the interviews, axial coding the transcripts and creating an affinity diagram, piecing together important themes from stakeholder statements in the interviews. From this affinity diagram, we were able to then determine key words/phrases that help describe common themes regarding mental health resources on campus that the stakeholders identified to help map a better conceptual model of our issue and what steps needed to be taken for our website. Some key ideas we were able to draw from these interviews included centrality of SHAC counseling services, information fragmentation and reach, and gaps in knowledge of available resources that address their needs. Thus, from these thematic insights, we were able to agree on three main requirements (described below) that each website/application must have to properly address these existing concerns. This requirements generation was then used to guide the design of the second, mid-fidelity prototype.
+        </p>
+        <h3>Requirements Generation</h3>
+        <p><i>Common Q&As</i><br>
+          Description: List of commonly asked questions and misconceptions with detailed answers below each based on the user-selected question.<br>
+          Usage: The website includes a Ã¢â‚¬Å"HelpÃ¢â‚¬Â section which includes FAQs, points of contact, and troubleshooting.</p>
+  
+        <p><i>Resource Directory</i><br>
+          Description: Comprehensive guide of all mental health and wellness resource options with links to all related organizations at Carleton and Student Wellness Directory.<br>
+          Usage: Included under the Ã¢â‚¬Å"ResourcesÃ¢â‚¬Â tab is a portal to all relevant mental health resources which the user can then search for specific resources using keywords or click on a resource to delve deeper into that resource.</p>
+  
+        <p><i>Counseling Options/Scheduling</i><br>
+          Description: Comprehensive list of what counseling services are available, how to access/schedule them, and other relevant information.<br>
+          Usage: Through the resource directory, you are able to immediately access counseling services and from there, are able to schedule a counseling appointment through either SHAC, TimelyCare, or group counseling sessions.</p> <br>
+        <h3>Mid-Fidelity Prototype</h3>
+      </div>
+    </section><!-- /Requirements Section -->
+
+    <!-- Screen Recordings Section -->
+    <section class="image-descriptions">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <video width="100%" controls aria-label="Wellness Calendar Demo: Demonstrates how users can interact with the wellness calendar, viewing events and activities related to mental health on campus.">
+              <source src="assets/video/SR1.mov" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <p>Wellness Calendar: How users can interact with the wellness calendar, viewing events and activities related to mental health on campus.</p>
+          </div>
+          <div class="col-md-4">
+            <video width="100%" controls aria-label="Resource Portal Demo: Shows how users can navigate the mental health resource portal and access related services on campus.">
+              <source src="assets/video/SR2.mov" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <p>Resource Portal: How users can navigate the mental health resource portal and access related services on campus.</p>
+          </div>
+          <div class="col-md-4">
+            <video width="100%" controls aria-label="Q&As/Help Section Demo: An overview of the Help section, including FAQs and troubleshooting for students needing assistance.">
+              <source src="assets/video/SR3.mov" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <p>Q&As/Help Section: An overview of the Help section, including FAQs and troubleshooting for students needing assistance.</p>
+          </div>
+          <div class="col-md-4">
+            <video width="100%" controls aria-label="Scheduling Counseling Service Demo: Demonstrates how users can schedule counseling services through the platform.">
+              <source src="assets/video/SR4.mov" type="video/mp4">
+              Your browser does not support the video tag.
+            </source>
+            <p>Scheduling Counseling Service: How users can schedule counseling services through the platform.</p>
+          </div>
+        </div>
+      </div>
+      <p><b>Link to Figma Design File: <a href="https://www.figma.com/design/SZosa5VRhWwMGg5pyyz0aq/CampusCare-Prototype?node-id=31-20&p=f&t=vHY8z9i7zGYsRqgP-0" target="_blank"><u>https://www.figma.com/design/SZosa5VRhWwMGg5pyyz0aq/CampusCase-Prototype?node-id=101-31&p=f&t=WsnTUUSC0S4RTmKk-0</u></a></b></p>
+    </section><!-- /Screen Recordings Section -->
+
+        <!-- UX Evaluation Section -->
+        <section class="hero section">
+          <div class="container">
+            <h3>UX Evaluation Process</h3>
+            <p>In order to gain user feedback on the current website workflow and design choices for the mid-fidelity prototype, I conducted a co-discovery UX evaluation with two Carleton students. During this evaluation, both users viewed the figma prototype on the same device and verbalized their thought processes while they interacted with the prototype. In particular, they were encouraged to voice their opinions, actions, reasons for choices, points of confusion, aspects they liked, and to build off of each other's ideas.
+              <br>
+              The users were given the following tasks to complete: <br>
+              <b>Task 1</b>: Find out how to schedule a counseling appointment.<br>
+              <b>Task 2</b>: You want to find out how to get transportation to your health appointment at Allina Health.<br>
+              <b>Task 3</b>: Find a peer therapy group going on this wednesday.<br>
+            </p>
+            <p>
+              They were subsequently asked the following series of questions regarding each task to gain further insight into their thoughts on the interface:
+<br>1. Were the steps to get to the desired result intuitive?<br>
+2. Is the information provided organized as you expected it to be?<br>
+3. Is there something you would expect to be in the navigation bar that currently is not?<br>
+4. Are there any elements that obscure the most important information for accomplishing this task?<br>
+
+            </p>
+            <h3>UX Metrics</h3>
+            <p>
+              While the evaluation was being conducted, the following three metrics were recorded: <b>time on task</b>, <b>number errors</b>, and <b>number of clicks</b>. There were no errors for the first two tasks. However, for the third task, users assumed that finding a peer therapy group would be under resources and after a few misclicks, realized the capability to book events may be under Ã¢â‚¬Å"wellness calendarÃ¢â‚¬Â. The time on task for the first task of scheduling a counseling appointment was the longest (76 seconds) as users were viewing the webpage for the first time and were commenting on its different features. For the second and third task, they were more familiar with the website, and despite making mistakes on the third task, still finished the task significantly quicker (34 seconds) than the first task. The number of clicks to get to the desired destination was 2-4 for all of the tasks, meaning it was relatively straightforward for users to accomplish the tasks. Once users had gained familiarity with the first task, they found the second task of finding transportation resources to be straightforward with no errors, a time of 15 seconds, and only 2 clicks to get to the desired destination.
+            </p>
+            <p>
+              The UX metrics data can be seen here:<br>
+
+              <b>Task 1</b> Metrics<br>
+Time on task - 76 seconds<br>
+Number of errors - 0<br>
+Number of clicks to get to wanted destination - 3<br>
+
+<br>
+<b>Task 2</b> Metrics<br>
+Time on task - 15 seconds<br>
+Number of errors - 0<br>
+Number of clicks to get to wanted destination - 2<br>
+<br>
+<b>Task 3</b> Metrics<br>
+Time on task - 34 seconds<br>
+Number of errors - 2<br>
+Number of clicks to get to wanted destination - 4<br>
+            </p>
+            <h3>UX Evaluation Results</h3>
+            <p>
+              Users felt that the readability of the text across each of the pages could be improved. When scrolling on the resource page for the first task, one user said Ã¢â‚¬Å"I just wish the font was a little biggerÃ¢â‚¬Â. A similar comment was made for the second task by the second user who said Ã¢â‚¬Å"I wish the fonts were a little bit bigger, or, maybe easier to readÃ¢â‚¬Â. 
+<br>The users generally found the design of the website to be intuitive and liked the simplicity of resource hub in presenting key resources. After being asked to reflect on the intuitiveness of the website in scheduling a counseling appointment, the first user stated, Ã¢â‚¬Å"Yeah, I think we went to resources and then counseling services. I think that's pretty, pretty intuitiveÃ¢â‚¬Â.
+<br>Both users questioned why mindfulness was under a separate tab than resources as it didnÃ¢â‚¬â„¢t particularly stand out to them as a key navigation platform. One user said Ã¢â‚¬Å"I'm kind of curious, why is mindfulness like, not under the resources, or why is the mental health article student tips not in mindfulness?Ã¢â‚¬Â
+<br>The users commented in different places on the organization of the text in enabling them to spot the key information. One user said when looking at the way the information was organized on the transportation page, Ã¢â‚¬Å"maybe it'd be better as, like, a bullet point list or something so it's a lot easier to spot 'Oh, Alina clinics, right there', instead of having to look through sentences. But other than that, it's very intuitive.Ã¢â‚¬Â And similarly, when looking at the information for the peer therapy group on the event calendar, said Ã¢â‚¬Å"I feel like, if there's multiple [events], you have to do, like, a table or somethingÃ¢â‚¬Â, commenting on possible ways to reorganize the information to make it easier for users to digest.
+            </p>
+            <h3>Improvements from UX Evaluation Results</h3>
+            <p><b>1. Font size</b> - Made the font size larger for all text for greater readability, accessibility, and overall design aesthetic.
+              <br><b>2. Quick links</b> - Added quick links to the main resources (SHAC counseling, support groups, and booking wellness events) on the front page in order to shorten the number of clicks required to get to the desired destination.
+              <br><b>3. Condensed text</b> - Made the text descriptions more condensed for greater readability and to make it easier to pinpoint the main information and reduce the time on task.
+              <br><b>4. Recategorizations</b> - Moved mindfulness to be under the broader resources hub as users felt it wasnÃ¢â‚¬â„¢t important enough to stand alone. Relabeled Ã¢â‚¬Å"wellness calendarÃ¢â‚¬Â to Ã¢â‚¬Å"eventsÃ¢â‚¬Â to help users better understand its purpose.
+              <br><b>5. More connections</b> - Created more connections between pages. For example, when looking at support groups, you can easily add the scheduled dates of the support group directly to the events calendar rather than having to renavigate to the events page to save the event.
+              <br><b>6. Improved Aesthetic Design</b> - Improved design aesthetics and overall structure for better website flow. This included altering the color scheme, improving natural spacing, boxing in or highlighting more of the key elements, and more descriptive images and/or text.</p>
+              <h3>High-Fidelity Prototype</h3>
+          </div>
+        </section><!-- /Requirements Section -->
+
+    <!-- Screen Recordings Section -->
+    <section class="image-descriptions">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <video width="100%" controls aria-label="Home and Resource Portal: Users can access campus mental health resources and general wellness tips and information.">
+              <source src="assets/video/HSR1.mov" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <p>Home and Resource Portal: Users can access campus mental health resources and general wellness tips and information.</p>
+            </div>
+          <div class="col-md-4">
+            <video width="100%" controls aria-label="Wellness Calendar/Events: Users can view campus events and save them to their personal calendar.">
+              <source src="assets/video/HSR2.mov" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <p>Wellness Calendar/Events: Users can view campus events and save them to their personal calendar.</p>
+            </div>
+          <div class="col-md-4">
+            <video width="100%" controls aria-label="Help Section: An overview of the Help section, including FAQs and troubleshooting for students needing assistance.">
+              <source src="assets/video/HSR3.mov" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <p>Help Section: An overview of the Help section, including FAQs and troubleshooting for students needing assistance.</p>
+          </div>
+      </div>
+      <p><b>Link to Figma Design File: <a href="https://www.figma.com/design/SZosa5VRhWwMGg5pyyz0aq/CampusCase-Prototype?node-id=101-31&p=f&t=WsnTUUSC0S4RTmKk-0" target="_blank"><u>https://www.figma.com/design/SZosa5VRhWwMGg5pyyz0aq/CampusCase-Prototype?node-id=101-31&p=f&t=WsnTUUSC0S4RTmKk-0</u></a></b></p>
+    </section><!-- /Screen Recordings Section -->
+
+
+        <!-- UX Evaluation Section -->
+        <section class="hero section">
+          <div class="container">
+            <h3>Potential Improvements & Future Steps</h3>
+            <p><b>1. Additional user input</b> - While the UX evaluation with two users provided valuable feedback, testing with a larger sample size would give broader and more diverse perspectives to analyze. Additionally, this would provide more UX metrics data that could then be compared against the initial measurements to see whether improvements have been made in usability. For example, users expressed confusion with the wellness calendar and it could be helpful to see whether users think that the new categorizations are more intuitive.
+              <br><b>2. Comparison to existing alternatives</b> - Gather measurements for the improved prototype and see how this qualitatively and quantitatively compares to existing alternatives (e.g. looking through Carleton website for the information). This would give justifiable evidence to the merit of using this application over other alternatives. Gather user feedback on whether they would be interested in using the website and if they would recommend this to others.
+              <br><b>3. More accessibility features</b> - Users were interested in the accessibility features icon but were unable to do anything with it. They also commented on readability issues of the prototype including font size and organization. It would be valuable to conduct accessibility testing on the new prototype to see whether it meets certain standards and to include additional features such as language translation and audio support.
+              <br><b>4. Include onboarding tutorial</b> - Users did not feel like the wellness calendar and its purpose was immediately intuitive as they asked multiple follow questions about the purpose of different features including whether it was public facing or personal, and what syncing would Google calendar would do. While some of these points of confusion were improved in the high-fidelity aspect via design choices, it could still be helpful to include brief onboarding tutorials for first time users to help reduce the number of errors and quickly gain familiarity with the webpage layout and features. It would also be helpful to gain user input on whether or not this would help them.
+              <br><b>5. Additional capabilities via login</b> - Users were curious about what the purpose of logging in would be for this interface. By incorporating login capabilities/interface, users would be able to access more features tied to their Carleton account. For example, being able to sync events to their personal calendar, or directly booking transportation services via their account to get updates/notifications.
+              <br><b>6. Privacy concerns/data encryption</b> - Especially when working with vulnerable topics like mental health, privacy concerns and data encryption becomes a particularly prevalent concern. While not explicitly mentioned in the UX evaluations, in future steps, it would be important to gather user feedback in this aspect and what features they are comfortable with.
+              <br><b>7. Further user personalization</b> - Users became more efficient after gaining some familiarity with the website, seen in improvements to time on task for tasks 2 and 3. Implementing further user personalization might further enhance this efficiency and address individual and diverse mental health needs. Personalizations may include notification preferences for scheduled events or recommended events based on scheduling history. This could also include optimization for mobile device use.
+            </p>
+            
+          </div>
+        </section><!-- /Requirements Section -->
+
+  </main>
+
+  <!-- Scroll Top -->
+  <div id="scroll-top">^</div>
+
+  <script>
+    const scrollTopBtn = document.getElementById('scroll-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) scrollTopBtn.classList.add('show');
+      else scrollTopBtn.classList.remove('show');
+    });
+    scrollTopBtn.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
+  </script>
+</body>
+</html>

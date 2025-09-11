@@ -1,0 +1,201 @@
+/* ===================================================================
+   MAIN STYLESHEET
+   This file contains styles for all pages: Home, Projects, Contact,
+   and the CampusCare project page.
+   =================================================================== */
+
+/* 1. Generic Body & Typography Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffffff;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  color: #479bf5;
+}
+
+a {
+  color: #479bf5;
+  text-decoration: none;
+}
+
+/* 2. Header & Navigation */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+header .container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  font-weight: 500;
+  color: #333;
+}
+
+nav ul li a.active {
+  color: #479bf5;
+}
+
+/* 3. Main Content Area */
+main {
+  max-width: 1100px;
+  margin: 100px auto 40px;
+  padding: 0 20px;
+}
+
+/* 4. Page-Specific Component Styles */
+
+/* Index Page Bio Box */
+.bio-box {
+  background: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+}
+
+.bio-box img {
+  max-width: 250px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Contact Page Info Box */
+.info {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.info h3 {
+  margin: 0 0 10px;
+}
+
+/* Projects Page Project Box */
+.project {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.project > div {
+  flex: 1;
+  min-width: 280px;
+}
+
+.project img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+/* Force stacking on smaller screens */
+@media (max-width: 768px) {
+  .project {
+    flex-direction: column;
+  }
+  
+  .project > div {
+    min-width: 100%;
+  }
+  
+  .project img {
+    max-width: 100%;
+  }
+}
+
+/* 5. CampusCare Project Page Styles */
+.section {
+  margin-bottom: 60px;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.image-grid img, .image-grid video {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.image-grid p {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* 6. Footer */
+footer {
+  background: #343a40;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+/* 7. Scroll Top Button */
+#scroll-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #479bf5;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+
+#scroll-top.show {
+  opacity: 1;
+  visibility: visible;
+}
